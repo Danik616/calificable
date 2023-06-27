@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "baseUrl": "./",
+      "paths": {
+        "#Config/*": ["./src/config/*"],
+        "#Controllers/*": ["./src/controllers/*"],
+        "#Dto/*": ["./src/dto/*"],
+        "#Routes/*": ["./src/routes/*"],
+        "#Schemas/*": ["./src/schemas/*"],
+        "#Lib/*": ["./src/lib/*"] 
+      }
+    },
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  

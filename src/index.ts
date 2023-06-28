@@ -1,16 +1,12 @@
-import express from 'express'
-const app= express()
-app.use(express.json())
+import httpServer from "#Config/http.ts"
+import '#Config/env.ts'
 
-const PORT= 3000
+const bootstrap= async ()=>{
 
+    httpServer.listen(process.env.PORT, () =>{
+        console.log(`Servidor escuchando en el puerto ${process.env.PORT}`)
+    })
+}
 
-app.get('/ping', (_req, res) => {
-    console.log("logrado")
-    res.send('pong')
-})
+bootstrap()
 
-
-app.listen(PORT, () => {
-    console.log(`Servidor en el puerto ${PORT}`)
-})

@@ -1,16 +1,15 @@
-import express from 'express'
-const app= express()
-app.use(express.json())
+import httpServer from "#Config/http.ts"
+import '#Config/env.ts'
+import connectDB from "#Config/db.ts"
 
-const PORT= 3000
+const bootstrap= async ()=>{
 
+    await connectDB(String(process.env.MONGODB_URL))
 
-app.get('/ping', (_req, res) => {
-    console.log("logrado")
-    res.send('pong')
-})
+    httpServer.listen(process.env.PORT, () =>{
+        console.log(`Servidor escuchando en el puerto ${process.env.PORT}`)
+    })
+}
 
+bootstrap()
 
-app.listen(PORT, () => {
-    console.log(`Servidor en el puerto ${PORT}`)
-})

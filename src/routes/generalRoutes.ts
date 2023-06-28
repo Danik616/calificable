@@ -1,13 +1,11 @@
+import doctorRegisterController from '#Controllers/doctorRegisterController.ts'
+import doctorRegisterDTO from '#Dto/doctorRegister.dto.ts'
 import { Router } from 'express'
 
 const userRouter= Router()
 
 
 
-userRouter.get('/ping', (_req, res) => {
-
-    console.log('logrado')
-    res.send('pong')
-  })
+userRouter.post('/register-doctor', doctorRegisterDTO, doctorRegisterController)
 
 export default userRouter

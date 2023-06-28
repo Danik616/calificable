@@ -3,9 +3,7 @@ import mongoose from "mongoose";
 const { Schema , model }= mongoose
 
 const citaSchema= new Schema({
-    _id: {
-        type: String
-    },
+    
     id_paciente: {
         type: String,
         require: true

@@ -3,9 +3,7 @@ import mongoose from "mongoose";
 const { Schema , model }= mongoose
 
 const pacienteSchema= new Schema({
-    _id: {
-        type: String
-    },
+    
     name: {
         type: String,
         require: true
@@ -16,7 +14,8 @@ const pacienteSchema= new Schema({
     },
     id:{
         type: Number,
-        require: true
+        require: true,
+        unique: true
     },
     age: {
         type: Number,

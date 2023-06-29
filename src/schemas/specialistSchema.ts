@@ -8,7 +8,7 @@ const specialistSchema= new Schema({
         _id : false
     },
     name: {
-        type: Number,
+        type: String,
         require: true
     }
 

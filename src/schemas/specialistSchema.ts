@@ -14,6 +14,10 @@ const specialistSchema= new Schema({
 
 })
 
-const specialistModel = model('specialis_list', specialistSchema)
+const specialistModel = model('specialist_list', specialistSchema)
 
 export default specialistModel
+
+
+
+

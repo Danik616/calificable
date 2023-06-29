@@ -3,13 +3,13 @@ import mongoose from "mongoose";
 const { Schema , model }= mongoose
 
 const citaSchema= new Schema({
-    
     id_paciente: {
-        type: String,
-        require: true
+        type: Number,
+        require: true,
+        unique:true
     },
     speciality:{
-        type: String,
+        type: Number,
         require: true
     },
     doctor:{
